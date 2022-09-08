@@ -1,0 +1,28 @@
+.c1{
+    margin-top: 30;
+    margin-left: 50;
+    margin-right: 70;
+    margin-bottom: 100;
+    width: 400;
+    height: 400;
+    border: 2px solid;
+}
+h3{
+    margin:15px;
+    border: 2px solid blue;
+}
+.c2{
+    padding-left: 50;
+    padding-top: 30;
+    padding-right: 45;
+    width: 300;
+    height: 300;
+    border: 2px solid green;
+}
+p{
+    padding-left: 20;
+    padding-top: 15;
+    padding-bottom: 50;
+    padding-right: 40;
+    border: 2px solid yellow;
+}
