@@ -1,0 +1,50 @@
+.main{
+    position: relative;
+    border: 1px solid gray;
+    height: 100%;
+}
+.div1{
+    border: 2px solid red;
+    background-color: red;
+    height:15%;
+    width: 10%;
+    position: absolute;
+    top: 0;
+    left:0;
+}
+.div2{
+    border: 2px solid purple;
+    background-color:purple;
+    height:15%;
+    width: 10%;
+    position: absolute;
+   top:0;
+    right:0;
+}
+.div3{
+    border: 2px solid blue;
+    background-color:blue;
+    height:15%;
+    width: 10%;
+    position: absolute;
+    bottom:0;
+    left:0;
+}
+.div4{
+    border: 2px solid plum;
+    background-color:plum;
+    height:15%;
+    width: 10%;
+    position: absolute;
+    bottom:0;
+    right:0;
+}
+.div5{
+    border: 2px solid green;
+    background-color:green;
+    height:15%;
+    width: 10%;
+    position: absolute;
+    bottom:50%;
+    right:50%;
+}

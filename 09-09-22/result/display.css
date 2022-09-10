@@ -1,0 +1,47 @@
+
+h1{ border: 2px solid  red;
+    display: inline-block;
+}
+h3{
+    border: 2px solid  blue;
+    margin:50px;
+    display: inline-block;
+}
+.li1{
+   display:inline-block;
+   border:1px solid red;
+   margin:50px;
+   padding:20px
+}
+.li2{
+    display:inline;
+    border:1px solid red;
+    margin:50px; 
+    padding:20px;
+}
+.li3{
+    display:inline;
+    border:1px solid red;
+    margin:50px;
+    padding:20px
+}
+         /* code starts for position */
+.main{
+    margin-left: 55;
+    position: relative;
+    border:2px solid;
+    height:300px;
+    width: 800px;
+}
+.sub{
+    border: 1px solid red;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+h4{
+    border:2px solid;
+    position: fixed;
+    left:0;
+    top:0;
+}           /* code ends for position */
