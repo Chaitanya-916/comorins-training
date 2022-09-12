@@ -1,15 +1,9 @@
-.div1{
+.div{
     border: 20px solid blue; 
-    height: 300;
-    width: 400;
-    background-color: aqua;  
-}
-.div2{
-    margin-top: 15px;
-    border: 20px solid blue; 
-    height: 300;
-    width: 400;
-    background-color: aqua;  
+    padding-bottom:18%;
+    width:25%;
+    background-color: aqua; 
+    margin-top: 20px; 
 }
 p{
     margin: 10px;

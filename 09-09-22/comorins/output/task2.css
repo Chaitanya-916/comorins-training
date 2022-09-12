@@ -18,7 +18,7 @@
     height:15%;
     width: 10%;
     position: absolute;
-   top:0;
+    top:0;
     right:0;
 }
 .div3{
@@ -39,12 +39,13 @@
     bottom:0;
     right:0;
 }
-.div5{
+.center{
     border: 2px solid green;
     background-color:green;
     height:15%;
     width: 10%;
     position: absolute;
-    bottom:50%;
-    right:50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }

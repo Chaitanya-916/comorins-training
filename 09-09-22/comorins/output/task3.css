@@ -1,50 +1,10 @@
+/* to create the blocks */
+.div{
+    display: inline-block;
+    border: 2px solid blue;
+    padding: 10%;
+    margin-top: 20px;
+}
 
-.div1{
-    display: inline-block;
-    border: 2px solid blue;
-    padding: 5%;
-    margin-top: 25px;
-}
-.div2{
-    display: inline-block;
-    border: 2px solid blue;
-    padding: 5%;
-}
-.div3{
-    display: inline-block;
-    border: 2px solid blue;
-    padding: 5%;
-    /* position: absolute; */
-    /* left: 400px; */
-    /* top: 1%; */
-    /* margin: 25px; */
-}
-.div4{
-    display: inline-block;
-    border: 2px solid blue;
-    padding: 5%;
-    /* position: absolute;
-    left: 400px;
-    top: 40%;
-    margin: 25px; */
-}
-.div5{
-    display: inline-block;
-    border: 2px solid blue;
-    padding: 5%;
-    /* position: absolute;
-    left: 200px;
-    top: 40%;
-    margin: 25px; */
-}
-.div6{
-    display: inline-block;
-    border: 2px solid blue;
-    padding: 5%;
-    /* position: absolute;
-    left: 10px;
-    top: 40%;
-    margin: 25px; */
-}
 
 
