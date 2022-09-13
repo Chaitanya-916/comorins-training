@@ -1,0 +1,82 @@
+/* code for home page */
+*{
+    margin: 0;
+    padding: 0;
+}
+.navigation{
+    border: 1px solid #333;
+    background-color: #333;
+    width: 100%;
+    position: fixed;
+    padding: 10px;
+   
+}
+.uli{
+    text-align: center;
+}
+.li1{
+    color:white; 
+    display: inline;
+    margin-right:20px;   
+}
+a{
+    color: #fff;;
+    text-decoration: none;
+}
+.content{
+    padding-top: 3%;
+}      /* code for home page ends*/
+
+/* code for form page starts*/
+form{
+    padding-top: 3%;
+    width: 50%;
+    margin:0 auto;
+}
+.form-border{
+    border: 1px solid #ced4da;
+    border-bottom:2px solid#FAA61A;
+    display: inline-block;
+    margin-left: 10px;
+    padding-right: 10px;    
+}
+.color{
+    display: inline-block;
+    margin-left: 20px;
+    border: 1px solid #ced4da;
+    border-bottom:2px solid#FAA61A;
+    width: 23%;
+}
+.submit{
+    margin-left: 30%;
+    background-color: #FAA61A;
+    color: #fff;
+    border: #FAA61A solid;
+}
+label{
+    display: inline-block;
+}   /* code for form page ends*/
+
+/* code for display page starts*/
+.display2{
+    margin-top: 3%;
+    display: inline-block;
+    width: 30%;
+    background-color: yellow;
+
+}
+.display-h{
+    color: red;
+}
+.ul-dis{
+    margin-left: 20px;
+}       /* code for display page ends*/
+
+/* code for iframe page starts*/
+iframe{
+    margin-top: 4%;
+    height: 90%;
+    width: 60%;
+}
+
+

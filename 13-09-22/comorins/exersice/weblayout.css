@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    padding: 2%;
+    background-color:#333;
+    text-align: center;
+}
+nav{
+    margin-top:2px;
+    padding: 1%;
+    text-align: center;
+    background-color:gray;
+    color: darkgreen;
+}
+section{
+    margin-top:2px;
+    padding: 14%;
+    color: #333;
+    text-align: center;
+    background-color:grey;
+}
+footer{
+    margin-top:2px;
+    padding: 2%;
+    text-align: center;
+    color: brown;
+    background-color:black;
+}
