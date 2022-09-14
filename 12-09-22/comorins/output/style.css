@@ -37,23 +37,28 @@ form{
     border: 1px solid #ced4da;
     border-bottom:2px solid#FAA61A;
     display: inline-block;
-    margin-left: 10px;
+    margin-left: 15px;
     padding-right: 10px;    
 }
 .color{
     display: inline-block;
-    margin-left: 20px;
+    margin-left: 15px;
     border: 1px solid #ced4da;
     border-bottom:2px solid#FAA61A;
     width: 23%;
 }
 .submit{
-    margin-left: 30%;
+    margin-left: 35%;
     background-color: #FAA61A;
     color: #fff;
     border: #FAA61A solid;
 }
+.name{
+    display: inline-block;
+    width: 10%;
+}
 label{
+    width: 10%;
     display: inline-block;
 }   /* code for form page ends*/
 
@@ -77,6 +82,6 @@ iframe{
     margin-top: 4%;
     height: 90%;
     width: 60%;
-}
+}       /* code for iframe page ends*/
 
 

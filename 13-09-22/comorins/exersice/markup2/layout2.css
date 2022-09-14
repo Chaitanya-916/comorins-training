@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    padding: 2%;
+    background-color:#333;
+    text-align: center;
+}
+nav{
+    margin-top:4px;
+    padding: 1%;
+    text-align: center;
+    background-color: darkgray  ;
+    color: darkgreen;
+}
+section{
+    margin-top:4px;
+    background-color:grey;
+    overflow: hidden;
+}
+.coloumn:last-child{
+    margin-right: 0px ;
+} 
+slideshow h2{
+    border: #333 solid 2px;
+    background-color: #333;
+    padding: 55px;
+    margin-bottom: 7px;
+    margin: 10px;
+}
+slideshow{
+    text-align: center;
+
+}
+.grid{
+    margin: 10px;
+}
+.coloumn {
+    border: 1px solid #fff;
+    height: 250px;
+    display: inline-block;
+    width: 29%;
+    background: white;
+    margin:25px 90px 22px 0;
+}
+footer{
+    margin-top:4px;
+    padding: 2%;
+    text-align: center;
+    color: brown;
+    background-color:black;
+}
