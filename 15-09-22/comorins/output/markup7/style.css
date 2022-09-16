@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding:0;
+}
+/* code for header div starts */
+nav {
+    background-color: #333333;
+}
+ul{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 48px 0px 49px 0px;
+}
+li {
+    display: inline-block;
+    color: #fffEFE;
+    /* padding: 48px 54px 49px 49px; */
+    padding-right: 54px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 27px;
+    line-height: 32px;
+}
+ul:last-child .last{
+    padding-right:0px;
+}
+/* nav div ends */
+.logo{
+    height:146px;
+    width:218px;
+    padding:26px 0 37px 75px;
+    
+}
+.head{
+    background-color: #FFFEFE;
+    border-bottom:#000000 solid 1px;
+    width: 100%;
+    display: inline-block;
+}
+.p-head{
+    float: right;
+    padding-top:75px;
+}
+.p-head1{
+    padding-bottom: 22px;
+}
+/* header div ends */
+/* code ffor section div starts */
+    
