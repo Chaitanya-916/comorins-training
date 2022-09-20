@@ -1,0 +1,42 @@
+body{
+    background-color: navy;
+}
+h2{
+    background-color: brown;
+}
+@media(min-width:575px) {
+    body{
+        background-color: blue;
+    }
+    h2{
+        background-color: red;
+    }
+
+}
+@media(min-width:767px){
+    h2{
+        width: 49%;
+        display: inline-block;
+        background-color: green;
+    }
+
+}
+@media(min-width:991px){
+    body{
+        background-color: yellow;
+    }
+    h2{
+        display: inline-block;
+        width: 32%;
+        background-color: blue;
+    }
+
+}
+@media(min-width:1200px){
+    h2{
+        width: 24%;
+        display: inline-block;
+        background-color: orange;
+    }
+
+}
