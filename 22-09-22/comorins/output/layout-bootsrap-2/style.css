@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+}
+.nav-li-1{
+    padding-right: 54px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 27px;
+
+}
+/* header starts */
+.logo{
+    width: 216px;
+    height: 156px;
+}
+.p-head{
+    text-align: right;
+}
+.nav-head2{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 30px;
+    color: #000000!important;
+}
+/* Section starts */
+section{
+    padding: 10px;
+}
+.section-1{
+    background-color: #F3F2EE;
+    margin: 0;
+}
+.img-c-1{
+    border: 1px solid #000000;
+    padding: 12px;
+}
+.card-text1{
+    padding-top: 49px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 23px;
+    line-height: 153.19%;
+    color: #000000;
+}
+.cart-text2{
+    padding: 13px 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 29px;
+    line-height: 153.19%;
+    color: #6D9D34;
+}
+.card-col{
+    background-color: #F3F2EE;
+    border: none;
+}
+/* section-2 starts */
+.section-2{
+    margin: 0;
+}
+.img-sec-2-left{
+    padding:101px 54px 130px 49px;
+}
+.sec-2-left2 h2{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 43px;
+    line-height: 153.19%;
+    color: #8F8F8F;
+    border-bottom: 1px solid #000000;
+}
+.sec-2-left2 p{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 118.19%;
+    color: #8F8F8F;
+}
+.section-2-left-para{
+    overflow: hidden;
+    padding-bottom: 59px;
+}
+.img-sec-2-left-2{
+    border: 1px solid #000000;
+    padding:17px 20px;
+    float: left;
+}
