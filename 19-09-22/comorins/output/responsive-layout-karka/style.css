@@ -2,47 +2,18 @@
     padding: 0;
     margin: 0;
 }
-@media(min-width: 767px) {
-    body{
-        width: 97%;
-        margin:0 auto;
-        background-color: darkgrey;
-        }  
-    .main {
-        margin-top: 20px;
-    }
-    header {
-        background-color: white;
-    }
-    h1 {
-        padding-top: 20px;
-        text-align: center;
-    }
-    header p {
-        text-align: center;
-        padding-top: 32px;
-        padding-bottom: 25px;
-    }
-    nav {
-        background-color: #333;
-    }
-    header li {
-        display: inline-block;
-        color: white;
-        text-align: center;
-    }
-    img.img-1 {
-        width: 100%;
-    }
-    ul{
-        text-align: center;
-    }
+@media(min-width:767px) {
+   body{
+    background-color: red;
+   }
+   h1{
+    text-align: center;
+   }
 }
 @media(min-width: 1200px) {
     body{
-    width: 97%;
-    margin:0 auto;
     background-color: darkgrey;
+    padding: 20px;
     }  
     .main {
         margin-top: 20px;

@@ -1,0 +1,32 @@
+h1{
+    margin: 0;
+    background-color: black;
+    color:#fff;
+}
+.nav{
+    background-color: gray;
+    padding-left: 20px;
+    color: white;
+}
+.box{
+    background-color: darkgray;
+    padding: 250px 0;
+    border-right: 10px white solid;
+    vertical-align: middle;
+}
+.box1{
+    background-color: gray;
+    padding: 250px 0;
+    vertical-align: middle;
+}
+.foot{
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+section{
+    margin-top: 10px;
+}
+footer{
+    margin: 0;
+}

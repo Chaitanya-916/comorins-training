@@ -132,7 +132,7 @@ ul:last-child .last{
     line-height: 153.19%;
 }
 .sec2-01 p{
-    padding-top:230px;
+    padding-top:200px;
     padding-bottom: 13px;
 }
 /* second part of section 2*/
@@ -259,12 +259,17 @@ ul:last-child .last{
 } */
 .sec3-1-p1{
     color: #B1B1B1;
-    padding-bottom: 1px solid#F0F0F0;
+    border-bottom: 1px solid#F0F0F0;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 43px;
     line-height: 153.19%;
+    padding-top: 16px;
+   
+}
+.sec3-1-para {
+    padding-top: 15px;
 }
 .sec3-1-para p{
     color: #FFFFFF;
@@ -277,6 +282,7 @@ ul:last-child .last{
 .sec3-1{
     display: inline-block;
     width: 33%;
+    vertical-align: top;
 }
 .about-div {
     overflow: hidden;
@@ -294,6 +300,8 @@ ul:last-child .last{
 .sec3-2 {
     display: inline-block;
     width: 32%;
+    padding-top: 15px;
+    vertical-align: top;
 }
 .sec3-2 p{
     color: #B1B1B1;
@@ -304,12 +312,13 @@ ul:last-child .last{
     line-height: 153.19%;
 }
 .sec3-2-img1{
-    padding-right: 16px;
+    padding: 16px;
 }
 /*  */
 .sec3-3{
     display: inline-block;
     width: 32%;
+    padding-top: 15px;
 }
 .sec-3-3-p{
     color: #B1B1B1;
@@ -327,6 +336,10 @@ ul:last-child .last{
     font-size: 21px;
     line-height: 195.19%;
 }
+.sec3-3-detail {
+    padding-top: 25px;
+}
+/* footer sec starts */
 footer{
     background-color:#777777;
     padding: 20px;
