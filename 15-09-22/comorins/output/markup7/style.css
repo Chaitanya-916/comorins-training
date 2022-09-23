@@ -222,6 +222,9 @@ ul:last-child .last{
     font-size: 20px;
     line-height: 169.19%;
 }
+.sec-3-1-main {
+    padding-top: 20px;
+}
 .read1{
     color: #6D9D34;
     font-family: 'Roboto';
@@ -253,10 +256,10 @@ ul:last-child .last{
 .main-sec3{
     background-color: #333333;
 }
-/* .sec3-1{
-    padding-top:63px 35px;
-
-} */
+.sec-3-1-main {
+    padding-top: 20px;
+    padding-left: 15px;
+}
 .sec3-1-p1{
     color: #B1B1B1;
     border-bottom: 1px solid#F0F0F0;
@@ -291,6 +294,10 @@ ul:last-child .last{
     float: left;
     border: 1px solid #F0F0F0;
     padding: 13px 11px;
+}
+p.sec-3-1-p-last {
+    color: #fff;
+    padding-top: 24px;
 }
     /* sec3-2 starts */
 .sec3-2-img{
@@ -344,6 +351,7 @@ footer{
     background-color:#777777;
     padding: 20px;
 }
+
 .foot-p1{
     color:#D7E8B9;
     font-family: 'Roboto';
