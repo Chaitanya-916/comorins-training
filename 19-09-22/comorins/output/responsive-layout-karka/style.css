@@ -2,14 +2,384 @@
     padding: 0;
     margin: 0;
 }
+@media(min-width:575px) {
+    body{
+     background-color: darkgrey;
+     padding: 20px;
+    }
+    header {
+     background-color: white;
+     }
+    h1{
+     text-align: center;
+     font-size: 50px;
+    }
+    header p {
+    text-align: center;
+    padding-top: 29px;
+    padding-bottom: 25px;
+    font-size: 20px;
+
+    }
+    nav {
+        background-color: #333;
+    }
+    nav ul {
+        text-align: center;
+    }
+    header li {
+        display: inline-block;
+        color: white;
+        padding: 15px 25px;
+        font-size: 20px;
+    }
+    /*  */
+    .section-1 {
+        width: 100%;
+        display: inline-block;
+        vertical-align: top;
+    }
+    
+    img.img-1 {
+        width: 100%;
+        height: 210px;
+    }
+    .section-1-01 {
+        margin-top: 15px;
+        right: 10px;
+        padding: 10px;
+        background-color: white;
+    }
+    .section-1-01 h2 {
+        padding-bottom: 10px;
+    }
+    .section-1-01 h4 {
+        padding-bottom: 12px;
+    }
+    .section-1-01 p {
+        padding-top: 10px;
+    }
+    .section-1-01-parra2{
+        padding: 10px 0;
+    }
+    /*  */
+    .section-1-02 {
+        background-color: white;
+        margin-top: 15px;
+        padding: 10px 10px;
+        display: inline-block;
+    }
+    .section-1-02 h2 {
+        padding-bottom: 10px;
+    }
+    .section-1-02 h4 {
+        padding-bottom: 12px;
+    }
+    .section-1-02 p {
+        padding-top: 10px;
+    }
+    .section-1-02-parra2{
+        padding: 10px 0;
+    }
+    /*  */
+    .section-2 {
+        width: 100%;
+        display: inline-block;
+        padding-left: 10px;
+    }
+    .section-2-01 {
+        background-color: #fff;
+        padding: 12px;
+        margin-top: 15px;
+    }
+    img.img-2 {
+        width: 100%;
+        height: 191px;
+        padding: 10px 0;
+    }
+    .img-3 {
+        padding-top: 5px;
+        width: 100%;
+    }
+    .section-2-02 {
+        background-color: white;
+        margin-top: 10px;
+        padding: 10px;
+    }
+    .section-2-03 {
+        background-color: white;
+        margin-top: 12px;
+        padding: 10px;
+    }
+    h3 {
+        padding-bottom: 15px;
+    }
+    /*  */
+    footer h2{
+        color: white;
+        background-color: #333;
+        text-align: center;
+        padding: 15px;
+    }
+    footer {
+        padding:12px 0;
+    }
+ }
 @media(min-width:767px) {
    body{
-    background-color: red;
+    background-color: darkgrey;
+    padding: 20px;
    }
+   header {
+    background-color: white;
+    }
    h1{
     text-align: center;
    }
+   header p {
+    text-align: center;
+    padding-top: 32px;
+    padding-bottom: 25px;
+    }
+    nav {
+        background-color: #333;
+    }
+    nav ul {
+        text-align: center;
+    }
+    header li {
+        display: inline-block;
+        color: white;
+        padding: 15px 25px;
+    }
+    /*  */
+    .section-1 {
+        width: 66%;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    img.img-1 {
+        width: 100%;
+        height: 210px;
+    }
+    .section-1-01 {
+        margin-top: 15px;
+        right: 10px;
+        padding: 10px;
+        background-color: white;
+    }
+    .section-1-01 h2 {
+        padding-bottom: 10px;
+    }
+    .section-1-01 h4 {
+        padding-bottom: 12px;
+    }
+    .section-1-01 p {
+        padding-top: 10px;
+    }
+    .section-1-01-parra2{
+        padding: 10px 0;
+    }
+    /*  */
+    .section-1-02 {
+        background-color: white;
+        margin-top: 15px;
+        padding: 10px 10px;
+        display: inline-block;
+    }
+    .section-1-02 h2 {
+        padding-bottom: 10px;
+    }
+    .section-1-02 h4 {
+        padding-bottom: 12px;
+    }
+    .section-1-02 p {
+        padding-top: 10px;
+    }
+    .section-1-02-parra2{
+        padding: 10px 0;
+    }
+    /*  */
+    .section-2 {
+        width: 32%;
+        display: inline-block;
+        padding-left: 10px;
+    }
+    .section-2-01 {
+        display: inline-block;
+        background-color: #fff;
+        padding: 12px;
+        margin-top: 15px;
+    }
+    img.img-2 {
+        width: 100%;
+        height: 191px;
+        padding: 10px 0;
+    }
+    .img-3 {
+        height: 120px;
+        padding-top: 5px;
+        display: inline-block;
+        width: 100%;
+    }
+    .section-2-02 {
+        background-color: white;
+        margin-top: 10px;
+        padding: 10px;
+    }
+    .section-2-03 {
+        background-color: white;
+        margin-top: 12px;
+        padding: 10px;
+    }
+    h3 {
+        padding-bottom: 15px;
+    }
+    /*  */
+    footer h2{
+        color: white;
+        background-color: #333;
+        text-align: center;
+        padding: 10px;
+    }
+    footer {
+        padding:12px 0;
+    }
 }
+@media(min-width: 991px){
+    
+    body{
+    background-color: darkgrey;
+    padding: 20px;
+    }  
+    .main {
+        margin-top: 20px;
+    }
+    header {
+        background-color: white;
+    }
+    h1 {
+        padding-top: 20px;
+        text-align: center;
+    }
+    header p {
+        text-align: center;
+        padding-top: 32px;
+        padding-bottom: 25px;
+    }
+    nav {
+        background-color: #333;
+    }
+    nav ul{
+        text-align: left;
+    }
+    header li {
+        display: inline-block;
+        color: white;
+        padding: 15px 25px;
+    }
+    .li1{
+        float: right;
+        padding-right: 30px;
+    }
+    /*  */
+    .section-1 {
+        width: 66%;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    img.img-1 {
+        width: 100%;
+        height: 210px;
+    }
+    .section-1-01 {
+        margin-top: 15px;
+        right: 10px;
+        padding: 10px;
+        background-color: white;
+    }
+    .section-1-01 h2 {
+        padding-bottom: 10px;
+    }
+    .section-1-01 h4 {
+        padding-bottom: 12px;
+    }
+    .section-1-01 p {
+        padding-top: 10px;
+    }
+    .section-1-01-parra2{
+        padding: 10px 0;
+    }
+    /*  */
+    .section-1-02 {
+        background-color: white;
+        margin-top: 15px;
+        padding: 10px 10px;
+        display: inline-block;
+    }
+    .section-1-02 h2 {
+        padding-bottom: 10px;
+    }
+    .section-1-02 h4 {
+        padding-bottom: 12px;
+    }
+    .section-1-02 p {
+        padding-top: 10px;
+    }
+    .section-1-02-parra2{
+        padding: 10px 0;
+    }
+    /*  */
+    .section-2 {
+        width: 32%;
+        display: inline-block;
+        padding-left: 10px;
+    }
+    .section-2-01 {
+        display: inline-block;
+        background-color: #fff;
+        padding: 12px;
+        width: 95%;
+        margin-top: 12px;
+    }
+    img.img-2 {
+        width: 100%;
+        height: 191px;
+        padding: 10px 0;
+    }
+    .img-3 {
+        height: 120px;
+        padding-top: 5px;
+        display: inline-block;
+        width: 100%;
+    }
+    .section-2-02 {
+        background-color: white;
+        margin-top: 10px;
+        padding: 10px;
+    }
+    .section-2-03 {
+        background-color: white;
+        margin-top: 12px;
+        padding: 10px;
+    }
+    h3 {
+        padding-bottom: 15px;
+    }
+    /*  */
+    footer h2{
+        color: white;
+        background-color: #333;
+        text-align: center;
+        padding: 10px;
+    }
+    footer {
+        padding:12px 0;
+    }
+}
+
 @media(min-width: 1200px) {
     body{
     background-color: darkgrey;
@@ -32,6 +402,9 @@
     }
     nav {
         background-color: #333;
+    }
+    nav ul{
+        text-align: left;
     }
     header li {
         display: inline-block;
