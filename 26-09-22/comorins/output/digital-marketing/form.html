@@ -47,53 +47,69 @@
             </div>     
         </header>
     </div>
-    <section class="Form-section">
-        <form class="container">
-            <p>All fields are mandatory</p>
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <input type="text" class="form-control" id="inputEmail4" placeholder="First Name">
-              </div>
-              <div class="form-group col-md-6">        
-                <input type="text" class="form-control" id="inputPassword4" placeholder="Last Name">
-              </div>
-            </div>
-            <div class="form-group ">
-              <input type="email" class="form-control" id="inputAddress" placeholder="Email address">
-            </div>
-            <div class="form-group">
-              <input class="#" type="text" class="form-control" id="inputAddress2" placeholder="Post applied for">
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control" id="inputAddress2" placeholder="In short tell about you and the reason for applying the above post(s).">
-              </div>
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <label for="inputCity">City</label>
-                <input type="text" class="form-control" id="inputCity">
-              </div>
-              <div class="form-group col-md-4">
-                <label for="inputState">State</label>
-                <select id="inputState" class="form-control">
-                  <option selected>Choose...</option>
-                  <option>...</option>
-                </select>
-              </div>
-              <div class="form-group col-md-2">
-                <label for="inputZip">Zip</label>
-                <input type="text" class="form-control" id="inputZip">
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="gridCheck">
-                <label class="form-check-label" for="gridCheck">
-                  Check me out
-                </label>
-              </div>
-            </div>
-            <button type="submit" class="btn btn-primary">Sign in</button>
-          </form>
+    <section class="form-section">
+        <form class="container main-form">
+            <div class="sub-section-form container-fluid p-5">
+                <label class="main-label">All fields are mandatory</label>
+                <div class="form-row">         
+                    <div class="form-group col-md-6">           
+                        <input type="text" class="form-control" id="inputEmail4" placeholder="First Name">
+                    </div>
+                    <div class="form-group col-md-6">        
+                        <input type="text" class="form-control" id="inputPassword4" placeholder="Last Name">
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <input type="email" class="form-control" id="inputAddress" placeholder="Email address">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control post-bar" id="inputAddress2" placeholder="Post applied for">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control text-area" id="inputAddress2" placeholder="In short tell about you and the reason for applying the above post(s).">
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">   
+                        <input type="text" class="form-control cv-bar" id="inputAddress2" placeholder="Attach your CV here">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input type="text" class="form-control upload-bar text-center align-middle" id="inputAddress2" placeholder="Upload file">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-info pl-5 pr-5 pt-2 pd-3">Apply Now</button>
+                <label class="d-block end-label">Your Application is submitted successfully</label>
+            </div> 
+        </form>
     </section>
+        <!-- Footer part -->
+    <footer>
+        <div class="main-foot container">
+            <p class="foot-p">WHO WE ARE</p>
+            <!-- footer row starts -->
+            <div class="row">
+                <div class="foot-left col-4">
+                    <p>Work</p>
+                    <p>Services</p>
+                    <p>Careers</p>
+                    <p>Working Process</p>
+                    <p>Why Choose Us</p>
+                </div>
+                <div class="foot-middle col-4">
+                    <p>Leagel</p>
+                    <p>Privacy policy</p>
+                    <p>Cookies Policy</p>
+                    <p>Terms and conditions</p>
+                </div>
+                <div class="foot-right col-4">
+                    <div class="foot-whatsapp"><img src="img/whatsapp.png"/></div>
+                    <p>Converge 2 Digital</p>
+                    <p>96, Rajendran Street, Valasarvakkam</p>
+                    <p>Chennai 600087</p>
+                    <p>Tamil Nadu, India</p>
+                    <img src="img/facebook.png"/>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

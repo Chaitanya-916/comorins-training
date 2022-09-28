@@ -42,12 +42,20 @@
     .head-rightside-img{
         width: 100%;
     }
+    .head-rightside {
+        padding-left: 157px;
+    }
+    img.head-rightside-img {
+        height: 271px;
+        width: 305px;
+    }
     /* section starts */
     .index-section{
         background: #F5F5F5;
     }
     .section-top-para {
         padding-bottom: 36px;
+        padding-top: 25px;
     }
     .section-top-para1{
         font-family: 'Roboto';
@@ -74,6 +82,13 @@
         font-size: 35px;
         padding: 10px 0;
     }
+    .title-content-phonesystem{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 30px;
+        padding:0;
+    }
     .title-para{
         font-family: 'Roboto';
         font-style: italic;
@@ -99,7 +114,7 @@
     }
     .section-colum{
         padding: 0 30px;
-        margin-bottom:50px;
+        margin-bottom: 50px;
     }
     .main-card{
         box-shadow: 0px 4px 10px 3px rgba(0, 0, 0, 0.25);
@@ -152,5 +167,65 @@
 }
             /* code for form page */
 @media(min-width:1200px){
-
+    /* section part */
+    .form-section{
+        padding-bottom: 150px;
+    }
+    .main-form{
+        margin-top: 30px;
+    }
+    .sub-section-form{
+        background: #FFFFFF;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 31px;
+        margin-top: 70px;
+    }
+    .main-label{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: -0.015em;      
+        color: #878787;        
+    }
+    .post-bar{
+        padding: 20px 0 50px 10px;
+    }
+    .text-area{
+        padding: 20px 0 150px 10px;
+    }
+    .cv-bar{
+        padding: 20px 0 70px 10px;
+    }
+    .upload-bar{
+        padding: 45px 0 45px 0;
+        background: #BBBBBB;
+        border-radius: 6px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+        display: flex;
+        align-items: center;
+        letter-spacing: -0.015em;  
+    }
+    .upload-bar::placeholder{
+        color: #FFFFFF;
+    }
+    .end-label{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;   
+        letter-spacing: -0.015em;      
+        color: #3EBDCC;
+    }
+        /* footer part starts here */
+    .foot-right.col-4 {
+        padding-left: 70px;
+    }
+    
 }

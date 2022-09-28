@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // let hobbies=["reading","gathering_knowladge","browsing_internet","travelling","exercise","meditation","coding"];  
+        // let a = 123;
+        // let b = true;
+        // let c ="chaitanya";
+        // console.log(hobbies,a,c);
+        // alert(b);
+        let resume = {
+            name : "Chaitanya",
+            education:[
+                {
+                    qualification : "SSLC",
+                    institute : "SMRV hr sec school",
+                    mark_in_percentage : 86,
+                    year_of_passing : 2014,
+                },
+                {
+                    qualification : "diplamo",
+                    institute : "KNSK polytechnic college ",
+                    department : "EEE",
+                    mark_in_percentage :66,
+                    year_of_passing : 2017,
+                },
+                {
+                    qualification: "B.E",
+                    institute :"KNSK college of engineering",
+                    department : "EEE",
+                    mark_in_percentage : 83,
+                    year_of_passing : 2021,
+                }
+            ],
+            personal_details :{
+                    email : "chaitanyav543@gmail.com",
+                    mob : 8220745916,
+                    gender : "male",
+                    marital_status : "single",
+                    family_details :{
+                        father_name : "M.Vadivel murugan",
+                        father_occupation : " Business man",
+                        mother_name : "A.Padma",
+                        mother_occupation : "House wife",
+                        siblings : "Two younger sisters",
+                        languages_known :["Tamil","English","malayalam"]
+                    },
+                    address : "121 mada street,krishnancoil,nagercoil1,tamilnadu.",
+                    hobbie :["reading","gathering_knowladge","browsing_internet","travelling","exercise","meditation","coding"],
+            },
+            certification :"None",
+            skills : ["Coding","self learning","communication","observer"],
+            experence : "fresher",
+            area_of_interest : "Software developer"     
+        }
+        let temp=0;
+        for(let i=0; i < (resume.education.length);i++){   
+            let mark = resume.education[i].mark_in_percentage; 
+            temp = temp + mark;          
+        }
+        total=(temp/(resume.education.length*100))*100
+        console.log("Total =",total,"%");
+
+        // console.log(resume.education[i].institute);
+        // console.log(resume);
+        // console.log(resume.personal_details.family_details);
+    </script>
+</head> 
+<body>
+    
+</body>
+</html>
