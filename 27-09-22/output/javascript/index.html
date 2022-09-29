@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>
+    <!-- <script>
         // let hobbies=["reading","gathering_knowladge","browsing_internet","travelling","exercise","meditation","coding"];  
         // let a = 123;
         // let b = true;
@@ -68,9 +68,41 @@
         // console.log(resume.education[i].institute);
         // console.log(resume);
         // console.log(resume.personal_details.family_details);
-    </script>
+    </script> -->
+   
 </head> 
 <body>
     
+    <!-- <input id="num1" type="number"/>
+    <input id="num2" type="number"/>
+    <button onclick="add()">Add</button> -->
+    <input id="item" type="text"/> 
+    <button onclick="add()">Add</button> 
+    <ul id="todo"> </ul>
+    
+
+    <script>
+        // function add(){
+        //     let a = document.getElementById("num1").value;
+        //     let b = document.getElementById("num2").value;
+        //     let c = Number(a)+Number(b);
+        //     alert(c);
+        // }
+        let list = [];
+            function add(){
+                let todo = document.getElementById("item").value;
+                list.push(todo);
+                console.log(list);
+                display(list);
+            }
+            function display(list_arr){
+                let ele="";
+                for(let i=0; i<list_arr.length;i++){
+                    ele = ele +"<li>" + list_arr[i] + "</li>";
+                }
+                document.getElementById("todo").innerHTML=ele
+            }
+            
+    </script>
 </body>
 </html>
