@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Q10</title>
+    <title>Q15</title>
 </head>
 <body>
     <script>
-        function isEvenOrOdd(num){
-            if(num % 2 == 0){
-                console.log(num + " is Even number");
+        function checkInRange(num,num1,num2){
+
+            if(num > num1 && num < num2){
+                console.log("between the range");
             }
             else{
-                console.log(num+" is Odd number");
+                console.log("Outside the range");
             }
         }
-        isEvenOrOdd(10);
-        isEvenOrOdd(7);
-
+        checkInRange(12,5,30);
+        checkInRange(23.3,10);
     </script>
 </body>
 </html>

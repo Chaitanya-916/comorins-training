@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q14</title>
+</head>
+<body>
+    <script>
+        function findTriangleType(side1,side2,side3){
+            if(side1==side2 && side1==side3 && side2==side3){
+                console.log("Equilateral triangle.");
+            }
+            else if(side1==side2 ||side2==side3){
+                console.log("Isosceles triangle.");
+            }
+            else{
+                console.log("Scalene triangle.")
+            }
+        }
+        findTriangleType(3,4,4);
+        findTriangleType(4,4,4);
+        findTriangleType(3,4,5);
+    </script>
+</body>
+</html>

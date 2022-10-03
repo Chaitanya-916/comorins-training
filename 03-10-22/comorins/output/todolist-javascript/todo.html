@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <h2>My to do list</h2>
+        <p>Double-click an item to mark it complete</p> <br/>
+        <input type="text" id="todo-entry-box" />
+        <button type="button" id="add-button" onclick="addItems()" class="btn btn-primary" >add</button>
+        <br/>   
+        <ol id="todo-list"></ol>
+        <div>
+        <button id="clear-completed-button" class="btn btn-primary mr-5">clear completed</button>
+        <button id="empty=-button" class="btn btn-secondary mr-5">Empty list</button>
+        <button id="save-button" class="btn btn-success">Save list</button>
+        </div>
+    </div>
+    <script>
+        if(!localStorage.getItem("todos")){
+            localStorage.setItem("todos",JSON.stringify([]));
+        }
+      let list = JSON.parse(localStorage.getItem("todos"));
+      function addItems(){
+        let items = document.getElementById("todo-entry-box").value;
+        list.push(items);
+        localStorage.setItem("todos",JSON.stringify(list));
+        display();
+      }
+      function display(){
+        let things = "";
+        let local_list= JSON.parse(localStorage.getItem("todos"));
+        for (let i=0;i<local_list.length;i++){
+            things=things+"<li>" + local_list[i] +"</li>";
+        }
+        document.getElementById("todo-list").innerHTML=things;
+      }
+      display();
+    </script>
+</body>
+</html>

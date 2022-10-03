@@ -4,21 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Q10</title>
+    <title>Q17</title>
 </head>
 <body>
     <script>
-        function isEvenOrOdd(num){
-            if(num % 2 == 0){
-                console.log(num + " is Even number");
+        function checkLeapYear(year){
+            if(year%4==0 && year%100 !=0 || year%400 ==0){
+                console.log("Leap year")
             }
             else{
-                console.log(num+" is Odd number");
+                console.log("Not a Leap Year")
             }
         }
-        isEvenOrOdd(10);
-        isEvenOrOdd(7);
-
+        checkLeapYear(2022);
+        checkLeapYear(2020);
     </script>
 </body>
 </html>

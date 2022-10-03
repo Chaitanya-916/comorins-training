@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function assignGrade(mark){
+            if(mark > 90 && mark<100){
+                console.log("grade : S");
+            }
+            else if(mark>80 && mark<91){
+                console.log("grade : A");
+            }
+            else if(mark>70 && mark<81){
+                console.log("grade : B");
+            }
+            else if(mark>60 && mark<71){
+                console.log("grade : C");
+            }
+            else if(mark>50 && mark<61){
+                console.log("grade : D");
+            }
+            else if(mark>40 && mark<51){
+                console.log("grade : E");
+            }
+            else if(mark>0 && mark<41){
+                console.log("Student has failed");
+            }
+            else{
+                console.log("Invalid mark");
+            }
+
+        }
+        assignGrade(93);
+        assignGrade(85);
+        assignGrade(35);
+        assignGrade(66);
+        assignGrade(123);
+    </script>
+</body>
+</html>

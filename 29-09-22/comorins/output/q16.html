@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q16</title>
+</head>
+<body>
+    <script>
+        function evalNumbers(num1,operator,num2){
+            if(operator=="+"){
+                console.log("add");
+            }
+            else if(operator=="-"){
+                console.log("Subtract");
+            }
+            else if(operator=="*"){
+                console.log("Multiplication");
+            }
+            else if(operator=="/"){
+                console.log("Divition");
+            }
+            else if(operator=="%"){
+                console.log("Modulus");
+            }
+            else{
+                console.log("Invalid operation");
+            }
+        }
+        evalNumbers(3,"+",5);
+        evalNumbers(3,"-",5);
+        evalNumbers(3,"*",5);
+        evalNumbers(3,"/",5);
+        evalNumbers(3,"%",5);
+        evalNumbers(3,"x",5);
+    </script>
+</body>
+</html>

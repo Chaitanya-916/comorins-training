@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <title>Todo list</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <h2>My to do list</h2>
+        <p>Double-click an item to mark it complete</p><br/>
+        <input type="text" id="todo-items" />
+        <button type="button" id="add" class="btn btn-primary"  >add</button>
+        <br/>   
+        <ol id="todo-lists"></ol>
+        <div>
+        <button id="clear" class="btn btn-primary mr-5">clear completed</button>
+        <button id="empty" class="btn btn-secondary mr-5">Empty list</button>
+        <button id="save" class="btn btn-success">Save list</button>
+        </div>
+    </div>
+
+    <script>
+        var todoitems = document.getElementById("todo-items");
+        var todolists = document.getElementById("todo-lists");
+        function newToDOItems(itemText,completed){
+            var toDoItem = document.createdElement("li");
+            var toDoText = document.createTextNode(itemText);
+            toDoItem.appendChild(toDoText);
+            if (completed) {
+        toDoItem.classList.add("completed");
+        }
+        todolists.appendChild(toDoItem);
+        toDoItem.addEventListener("dblclick", toggleToDoItemState);
+        }
+        var add_button = document.getElementById("add");
+        add_button.addEventListener("click", addItem);
+        function addItem(){
+            alert("You have clicked Add button");
+            var itemText = todoitems.value;
+            newToDoItems(itemText, false);
+        }
+        var clear_button = document.getElementById("clear");
+        clear_button.addEventListener("click", clearItem);
+        function clearItem(){
+            alert("You have clicked clear completed button");
+        }
+        var empty_button = document.getElementById("empty");
+        empty_button.addEventListener("click", emptyItem);
+        function emptyItem(){
+            alert("You have clicked Empty button");
+        }
+        var save_button = document.getElementById("save");
+        save_button.addEventListener("click", saveItem);
+        function saveItem(){
+            alert("You have Saved items");
+        }
+        
+        function toggleToDoItemState() {
+            if (this.classList.contains("completed")) {
+                this.classList.remove("completed");
+            } else {
+                this.classList.add("completed");
+            }
+        }
+        function clearCompletedToDoItems() {
+            var completedItems = toDolists.getElementsByClassName("completed");
+
+            while (completedItems.length > 0) {
+                completedItems.item(0).remove();
+            }
+        }
+
+
+
+        // let list = [];
+        // function add(){
+        //     let todo = document.getElementById("todo-items").value;
+        //     list.push(todo);
+        //     display(list);
+        // }
+        // function display(arr_lists){
+        //     let items = "";
+        //     for (let i=0;i<arr_lists.length;i++){
+        //         items = items + "<li>"+arr_lists[i]+"</li>";
+        //     }
+        //     document.getElementById("todo-lists").innerHTML=items
+        // }
+        function Save(){
+
+
+        }
+    </script>
+</body>
+</html>

@@ -8,17 +8,18 @@
 </head>
 <body>
     <script>
-        function isEvenOrOdd(n){
-            if(n % 2 == 0){
-                console.log(n,"is even number");
+        // let j;
+        function printPattern(n){
+            for(let i=1;i<=n;i++){
+                str = '';
+                for(let j=1;j<i+1;j++){
+                    str +=j + '';  
+                }
+                console.log(str);
             }
-            else{
-                console.log(n,"is odd number");
-            }
+            
         }
-        isEvenOrOdd(28);
-        isEvenOrOdd(93);
-
+        printPattern(6);
     </script>
 </body>
 </html>

@@ -9,10 +9,23 @@
 <body>
     <script>
         function helloWorld(language){
-            lang=language;
-            console.log(lang);
+            if(language=="tam"){
+                console.log("வணக்கம் உலகம்");
+            }
+            else if(language=="span"){
+                console.log("Hola Mundo");
+            }
+            else if(language=="fr"){
+                console.log("Bonjour le monde");
+            }
+            else{
+                console.log("Hello world");
+            }
         }
-        helloWorld("es");   
+        helloWorld("tam");
+        helloWorld("span");
+        helloWorld("fr");
+        helloWorld("en");   
     </script>
 </body>
 </html>
