@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Res</title>
+</head>
+<body>
+    <label>Name</label>
+    <input type="text" onkeyup="addDetail('name',this.value)" /><br/>
+    <label>Role</label>
+    <input type="text" onkeyup="addDetail('Role',this.value)"/><br/>
+    <label>Email</label>
+    <input type="email" onkeyup="addDetail('Email',this.value)" /><br/>
+    <label>Mobile-no</label>
+    <input type="number" onkeyup="addDetail('Mobile',this.value)"/><br/>
+    <label>Summary</label>
+    <textarea type="text" onkeyup="addDetail('Summary',this.value)"></textarea><br/>
+    <label>Experiance:</label><br>
+    <label>Role</label>
+    <input type="text" onkeyup="addDetail('experiance',this.value,0,'role')"/>
+    <label>Company Name</label>
+    <input type="text" onkeyup="addDetail('experiance',this.value,0,'Company name:')"/>
+    <label>place</label>
+    <input type="text" onkeyup="addDetail('experiance',this.value,0,'Place',)"/>
+    <label>Date of start</label>
+    <input type="date" onkeyup="addDetail('experiance',this.value,0,'Date of start')"/>
+    <label>Date of releave</label>
+    <input type="date" onkeyup="addDetail('experiance',this.value,0,'Date of releave')"/><br/>
+    <br/>
+    <label>Role</label>
+    <input type="text" onkeyup="addDetail('experiance',this.value,1,'role')"/>
+    <label>Company Name</label>
+    <input type="text" onkeyup="addDetail('experiance',this.value,1,'Company name:')"/>
+    <label>place</label>
+    <input type="text" onkeyup="addDetail('experiance',this.value,1,'Place',)"/>
+    <label>Date of start</label>
+    <input type="date" onkeyup="addDetail('experiance',this.value,1,'Date of start')"/>
+    <label>Date of releave</label>
+    <input type="date" onkeyup="addDetail('experiance',this.value,1,'Date of releave')"/><br/>
+    <label>Area of intrest</label>
+    <input type="text" onkeyup="addDetail('area of intrest',this.value)"/><br/>
+    <label>Skills:</label>
+    <input type="text" onkeyup="addDetail('skills',this.value,0)" />
+    <input type="text" onkeyup="addDetail('skills',this.value,1)" />
+    <input type="text" onkeyup="addDetail('skills',this.value,2)" /><br/>
+    <table>
+        <br/>
+        <label>Education</label>
+        <tr>
+            <td><input type="text" onkeyup="addDetail('education',this.value,0,'course')"/></td>
+            <td><input type="text" onkeyup="addDetail('education',this.value,0,'year')"/></td>
+            <td><input type="text" onkeyup="addDetail('education',this.value,0,'institute')" /></td>
+            <td><input type="text" onkeyup="addDetail('education',this.value,0,'percentage')"/></td>
+        </tr>
+        <tr>
+            <td><input type="text" onkeyup="addDetail('education',this.value,1,'course')"/></td>
+            <td><input type="text" onkeyup="addDetail('education',this.value,1,'year')"/></td>
+            <td><input type="text" onkeyup="addDetail('education',this.value,1,'institute')"/></td>
+            <td><input type="text" onkeyup="addDetail('education',this.value,1,'percentage')"/></td>
+        </tr>
+        <tr>
+            <td><input type="text" onkeyup="addDetail('education',this.value,2,'course')"/></td>
+            <td><input type="text" onkeyup="addDetail('education',this.value,2,'year')"/></td>
+            <td><input type="text" onkeyup="addDetail('education',this.value,2,'institute')"/></td>
+            <td><input type="text" onkeyup="addDetail('education',this.value,2,'percentage')"/></td>
+        </tr>
+        <tr>
+            <td><input type="text" onkeyup="addDetail('education',this.value,3,'course')"/></td>
+            <td><input type="text" onkeyup="addDetail('education',this.value,3,'year')"/></td>
+            <td><input type="text" onkeyup="addDetail('education',this.value,3,'institute')"/></td>
+            <td><input type="text" onkeyup="addDetail('education',this.value,3,'percentage')"/></td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+        <label>Projects</label>
+        <td><input type="text" onkeyup="addDetail('projects',this.value,0,'title')"/></td>
+        <td><textarea type="text" onkeyup="addDetail('projects',this.value,0,'abstract')"></textarea></td>
+        <td><input type="text" onkeyup="addDetail('projects',this.value,0,'softeare_used')"/></td>
+        </tr>
+        <br/>
+        <tr>
+        <td><input type="text" onkeyup="addDetail('projects',this.value,1,'title')"/></td>
+        <td><textarea type="text" onkeyup="addDetail('projects',this.value,1,'abstract')"></textarea></td>
+        <td><input type="text" onkeyup="addDetail('projects',this.value,1,'softeare_used')"/></td>
+        </tr>
+    </table>
+    <table>
+        <br/>
+        <label>certification</label>
+        <tr>
+            <td><input type="text" onkeyup="addDetail('certification',this.value,0,'course')"/></td>
+            <td><input type="text" onkeyup="addDetail('certification',this.value,0,'year')"/></td>
+            <td><input type="text" onkeyup="addDetail('certification',this.value,0,'institute')" /></td>
+        </tr>
+        <tr>
+            <td><input type="text" onkeyup="addDetail('certification',this.value,1,'course')"/></td>
+            <td><input type="text" onkeyup="addDetail('certification',this.value,1,'year')"/></td>
+            <td><input type="text" onkeyup="addDetail('certification',this.value,1,'institute')"/></td>
+        </tr>
+    </table>
+    <label>Personal Details: </label><br/>
+    <label>Age:</label>
+    <input type="text" onkeyup="addDetail('personal_details',this.value,'age')" /><br/>
+    <label>DOB:</label>
+    <input type="text" onkeyup="addDetail('personal_details',this.value,'dob')" /><br/>
+    <label>Gender:</label>
+    <input type="text" onkeyup="addDetail('personal_details',this.value,'gender')" /><br/>
+    <label>marital status:</label>
+    <input type="text" onkeyup="addDetail('personal_details',this.value,'marital-status')" /><br/>
+    <br/>
+    <label>Address:</label><br/>
+    <br/>
+    <label>House-no:</label>
+    <input type="number" onkeyup="addDetail('personal_details',this.value,'address','house-no')" /><br/>
+    <label>Street-Name:</label>
+    <input type="text" onkeyup="addDetail('personal_details',this.value,'address','street-name')" /><br/>
+    <label>Town:</label>
+    <input type="text" onkeyup="addDetail('personal_details',this.value,'address','town')" /><br/>
+    <label>District:</label>
+    <input type="text" onkeyup="addDetail('personal_details',this.value,'address','district')" /><br/>
+    <label>State:</label>
+    <input type="text" onkeyup="addDetail('personal_details',this.value,'address','state')" /><br/>
+    <label>country:</label>
+    <input type="text" onkeyup="addDetail('personal_details',this.value,'address','country')" /><br/>
+    <label>Pin-Code:</label>
+    <input type="number" onkeyup="addDetail('personal_details',this.value,'address','pin-code')" /><br/>
+    <label>languages</label>
+    <br/>
+    <input type="text" id="languages" onkeyup="addDetail('personal_details',this.value,'no-1','languages_known',0)"/><br/>
+    <input type="text" id="languages" onkeyup="addDetail('personal_details',this.value,1,'no-2','languages_known')" /><br/>
+    <input type="text" id="languages" onkeyup="addDetail('personal_details',this.value,2,'languages_known','no-3')" /><br/>
+    <button onclick="display()">Submit</button>
+    <div>
+        <code id="objective"></code>
+    </div>
+    <script>
+         let my_resume={
+            skills:[],
+            education:[],
+            experiance:[],
+            projects:[],
+            certification:[],
+            personal_details:{},
+
+
+         };
+        function addDetail(key,value,index=null,key_1=null,key_2=null){
+            if(index==null && key_1==null){
+                my_resume[key]=value;
+            }
+            
+            else if(key_1!=null) {
+                if(!my_resume[key][index]){
+                    my_resume[key][index]={};
+                }
+                my_resume[key][index][key_1]=value;
+            }
+            // else if(key_2!=null) {
+            //     if(!my_resume[key][index]){
+            //         my_resume[key][index]=[];
+            //     }
+            //     my_resume[key_1][index][key_2]=value;
+            // }
+            
+            else{
+                my_resume[key][index]=value;
+            }
+        }
+        function display(){
+            document.getElementById("objective").innerHTML=JSON.stringify(my_resume);
+            display();
+        }
+    </script>
+</body>
+</html>

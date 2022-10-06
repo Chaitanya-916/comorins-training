@@ -16,7 +16,7 @@
         <ol id="todo-list"></ol>
         <div>
         <button id="clear-completed-button" class="btn btn-primary mr-5">clear completed</button>
-        <button id="empty=-button" class="btn btn-secondary mr-5">Empty list</button>
+        <button id="empty=-button" onclick="emptyList()" class="btn btn-secondary mr-5">Empty list</button>
         <button id="save-button" class="btn btn-success">Save list</button>
         </div>
     </div>
@@ -35,11 +35,17 @@
         let things = "";
         let local_list= JSON.parse(localStorage.getItem("todos"));
         for (let i=0;i<local_list.length;i++){
-            things=things+"<li>" + local_list[i] +"</li>";
+            things=things+"<li>" + local_list[i] + " <button onclick='emptyList("+i+")'>del</button>" + "</li>";
         }
         document.getElementById("todo-list").innerHTML=things;
       }
       display();
+      function emptyList(num){
+        let new_list=JSON.parse(localStorage.getItem("todos"));
+        new_list.splice(num,1);
+        localStorage.setItem("todos",JSON.stringify(new_list));
+        display();
+      }
     </script>
 </body>
 </html>

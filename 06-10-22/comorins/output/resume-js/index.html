@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+</head>
+<body>
+    <!-- <input type="text" onkeyup="addDetail(this.value)" /> -->
+    <label>Name</label>
+    <input type="name" onkeyup="addDetail('name',this.value)" /><br/>
+    <label>Email</label>
+    <input type="email" onkeyup="addDetail('email',this.value)"  /><br/>
+    <label>Number</label>
+    <input type="number" onkeyup="addDetail('Mob',this.value)" /><br/>
+    <label>Skills:</label>
+    <input type="text" onkeyup="addDetail('soft_skills',this.value,0)" /><br/>
+    <input type="text" onkeyup="addDetail('soft_skills',this.value,1)" /><br/>
+    <input type="text" onkeyup="addDetail('soft_skills',this.value,2)" /><br/>
+    <label >EDU</label><br/>
+    <!-- <label>Course</label>
+    <label>Course</label>
+    <label>Course</label><br/> -->
+    <input type="text" onkeyup="addDetail('education',this.value,0,'course')"/>
+    <input type="text" onkeyup="addDetail('education',this.value,0,'year')"/>
+    <input type="text" onkeyup="addDetail('education',this.value,0,'institute')" />
+    <input type="text" onkeyup="addDetail('education',this.value,0,'percentage')"/><br>
+
+    <input type="text" onkeyup="addDetail('education',this.value,1,'course')"/>
+    <input type="text" onkeyup="addDetail('education',this.value,1,'year')"/>
+    <input type="text" onkeyup="addDetail('education',this.value,1,'institute')"/>
+    <input type="text" onkeyup="addDetail('education',this.value,1,'percentage')"/><br>
+
+    <input type="text" onkeyup="addDetail('education',this.value,2,'course')"/>
+    <input type="text" onkeyup="addDetail('education',this.value,2,'year')"/>
+    <input type="text" onkeyup="addDetail('education',this.value,2,'institute')"/>
+    <input type="text" onkeyup="addDetail('education',this.value,2,'percentage')"/><br>
+    <div>
+        <code id="objective"></code>
+    </div>
+    <script>
+        // let my_resume = {
+        //     name:"",
+        //     role:"",
+        //     email:"",
+        //     mobile:0 ,
+        //     summary:"",
+        //     experience:[{
+        //         role:"",
+        //         company_name:"",
+        //         place:"",
+        //         date_of_start:"",
+        //         date_of_releave:"",
+        //     },
+        //     {
+        //         role:"",
+        //         company_name:"",
+        //         place:"",
+        //         date_of_start:"",
+        //         date_of_releave:"",
+        //     },
+        //     ],
+        //     area_of_intrest:"",
+        //     soft_skills:[],
+        //     hard_skills:[],
+        //     education:[{
+        //         course:"",
+        //         institute:"",
+        //         marks:"",
+        //         year_from:"",
+        //         year_to:"",
+        //     },
+        //     {
+        //         course:"",
+        //         institute:"",
+        //         marks:"",
+        //         year_from:"",
+        //         year_to:"",
+        //     },
+        //     {
+        //         course:"",
+        //         institute:"",
+        //         marks:"",
+        //         year_from:"",
+        //         year_to:"",
+        //     },
+        //     ],
+        //     projects:[{
+        //         title:"",
+        //         abstract:"",
+        //         software_used:"",
+        //     },
+        //     {
+        //         title:"",
+        //         abstract:"",
+        //         software_used:"",
+        //     }
+        //     ],  
+        //     certfication:[{
+        //         course_name:"",
+        //         institute:"",
+        //         duration:"",
+        //         start_date:"",
+        //         end_date:"",
+        //     },
+        //     {
+        //         course_name:"",
+        //         institute:"",
+        //         duration:"",
+        //         start_date:"",
+        //         end_date:"",
+        //     },
+        //     ],
+        //     personal_details:{
+        //         age:"",
+        //         DOB:"",
+        //         gender:"",
+        //         marital_status:"",
+        //         address:{
+        //             house_no:"",
+        //             street_name:"",
+        //             town:"",
+        //             district:"",
+        //             state:"",
+        //             country:"",
+        //             pincode:""
+        //         },
+        //         languages_known:[],
+        //     },
+        //     activites:[],
+        //}
+        //  let my_resume={
+        //     soft_skills:[],
+        //     education:[],
+
+        //  };
+        function addDetail(key,value,index=null,key_1=null){
+            // alert(value);
+            // my_resume.name=value;
+            if(index==null && key_1==null){
+                my_resume[key]=value;
+            }
+            else if(key_1!=null) {
+                if(!my_resume[key][index]){
+                    my_resume[key][index]={};
+                }
+                my_resume[key][index][key_1]=value;
+            }
+            else{
+                my_resume[key][index]=value;
+            }
+            display();
+        }
+        function display(){
+            document.getElementById("objective").innerHTML=JSON.stringify(my_resume);
+        }
+        
+    </script>
+</body>
+</html>
