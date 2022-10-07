@@ -129,13 +129,15 @@
     <input type="number" onkeyup="addDetail('personal_details',this.value,'address','pin-code')" /><br/>
     <label>languages</label>
     <br/>
-    <input type="text" id="languages" onkeyup="addDetail('personal_details',this.value,'no-1','languages_known',0)"/><br/>
-    <input type="text" id="languages" onkeyup="addDetail('personal_details',this.value,1,'no-2','languages_known')" /><br/>
-    <input type="text" id="languages" onkeyup="addDetail('personal_details',this.value,2,'languages_known','no-3')" /><br/>
-    <button onclick="display()">Submit</button>
+    <input type="text" id="languages" onkeyup="addDetail('personal_details',this.value,'languages_known',0)"/><br/>
+    <input type="text" id="languages" onkeyup="addDetail('personal_details',this.value,1,'languages_known')" /><br/>
+    <input type="text" id="languages" onkeyup="addDetail('personal_details',this.value,2,'languages_known')" /><br/>
+    <button onclick="saver()">Submit</button>
     <div>
         <code id="objective"></code>
+        
     </div>
+    <ul id="show"></ul>
     <script>
          let my_resume={
             skills:[],
@@ -158,6 +160,7 @@
                 }
                 my_resume[key][index][key_1]=value;
             }
+
             // else if(key_2!=null) {
             //     if(!my_resume[key][index]){
             //         my_resume[key][index]=[];
@@ -169,10 +172,45 @@
                 my_resume[key][index]=value;
             }
         }
+        // function lanaguageDisplay(){
+        //     if(key_1!=null) {
+        //          if(!my_resume[key][index]){
+        //              my_resume[key][index]=[];
+        //         }
+            
+        //     my_resume[key][index][key_1]=value;
+        // }
+            // else{
+            //     return addDetail();
+            // }
+            // }
+        // function display(){
+        //     // document.getElementById("objective").innerHTML=JSON.stringify(my_resume)
+        //     // things=my_resume.name;
+        //     // document.getElementById("show").innerHTML=(things);
+
+            
+        // }    
         function display(){
-            document.getElementById("objective").innerHTML=JSON.stringify(my_resume);
-            display();
+            let data_list = "";
+            let data= JSON.parse(localStorage.getItem("new_resume"))
+            
+            for (let i=0;i<data.length;i++){
+                data_list += "<li>" + "<a href=view.html?name=" + data[i].name+">"+data[i].name + "</a>"+"</li>";
+            }
+            document.getElementById("show").innerHTML=data_list
         }
-    </script>
+        display();
+        function saver(){
+            document.getElementById("objective").innerHTML=JSON.stringify(my_resume)
+            if(!localStorage.getItem("new_resume")){
+                localStorage.setItem("new_resume",JSON.stringify([]));
+            }
+           let resume = JSON.parse(localStorage.getItem("new_resume"));
+           resume.push(my_resume);
+           localStorage.setItem("new_resume",JSON.stringify(resume))     
+           display();
+        }
+    </script> 
 </body>
 </html>
