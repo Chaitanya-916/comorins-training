@@ -18,11 +18,11 @@ function signUp(){
     }
     else{
         alert("give same password to each");
-    }
+    }  
 }
 
 function logIn(){    
-    localStorage.setItem('local-status',false)
+
     let user_id ={
         number : document.getElementById('user-id').value,
         password : document.getElementById('password-log').value,
@@ -45,6 +45,11 @@ function logIn(){
         alert("Wrong user number password");
     }
 }
+function localStatus(){
+    localStorage.setItem('local-status',false)
+}
+localStatus();
+
     let local_status = localStorage.getItem('local-status');
     let func=" ";
     if(local_status == 'true'){
@@ -74,35 +79,44 @@ function logOut(){
     }
 }
 let brands =[
-    { hotel_name:'KFC',
-        food : [ 
+    { 
+        hotel_name:'KFC',
+        food: [ 
             {
-              id:1,
-              name:'Chicken Biriyani',
-              price:220, 
-              category:"lunch",
-              type:"Non-Veg"
+                id:1,
+                name:'Chicken Biriyani',
+                price:"220rs", 
+                category:"lunch",
+                type:"Non-Veg",
+                brand:'KFC',
+                url:"https://geekrobocook.com/wp-content/uploads/2021/03/Tandoori-chicken-biryani.jpg"
             },
             {
                 id:2,
                 name:'Chicken chops',
-                price:170, 
+                price:"170 rs", 
                 category:"gravy",
-                type:"Non-Veg"
+                type:"Non-Veg",
+                brand:'KFC',
+                url:"https://www.yummytummyaarthi.com/wp-content/uploads/2017/08/IMG_5752-500x500.jpg"
             },
             {
                 id:3,
                 name:'Mutton Biriyani',
-                price:220, 
+                price:"220 rs", 
                 category:"lunch",
-                type:"Non-Veg"
+                type:"Non-Veg",
+                brand:'KFC',
+                url:"https://www.cubesnjuliennes.com/wp-content/uploads/2021/03/Best-Mutton-Biryani-Recipe.jpg"
             },
             {
                 id:4,
                 name:'Chicken Burgger',
-                price:110, 
+                price:"110 rs", 
                 category:"Snacks",
                 type:"Non-Veg",
+                brand:'KFC',
+                url:"https://hips.hearstapps.com/hmg-prod/images/190416-chicken-burger-082-1556204252.jpg"
             },
         ]
     },
@@ -113,36 +127,39 @@ let brands =[
             name:'idly',
             price:'15 per piece',
             category:'Tiffen',
-            type:'Veg'
+            type:'Veg',
+            brand:'Arya Bhavan',
+            url:"https://inemai.com/wp-content/uploads/2019/02/idly.jpg"
         },
         {
             id:2,
             name:'Dhosa',
-            price:'15 per piece',
+            price:'15 rs per piece',
             category:'Tiffen',
-            type:'Veg'
+            type:'Veg',
+            brand:'Arya Bhavan',
+            url:"https://b.zmtcdn.com/data/reviews_photos/1e2/19f261b43d11344ce5f483c20a0941e2_1561214851.jpg?fit=around|771.75:416.25&crop=771.75:416.25;*,*"
         },
         {
             id:3,
             name:'Meals',
-            price:'120rs',
+            price:'120 rs',
             category:'Lunch',
-            type:'Veg'
+            type:'Veg',
+            brand:'Arya Bhavan',
+            url:"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/hjpbgpuoarzjiyarrqy5"
         },
         {
             id:4,
             name:'Fried rice',
-            price:'140rs',
+            price:'140 rs',
             category:'Lunch',
-            type:'Veg'
+            type:'Veg',
+            brand:'Arya Bhavan',
+            url:"https://recipesofhome.com/wp-content/uploads/2020/06/veg-fried-rice-recipe.jpg"
         }
     ]
     },
 ]
-if(!localStorage.getItem("hotels")){
     localStorage.setItem("hotels",JSON.stringify(brands));
-}
-let hotels_brand = JSON.parse(localStorage.getItem('hotels')) 
-for(let j=0;j<hotels_brand.length;j++){
-   document.getElementById('hotel-top-brands'+j).setAttribute("href","view.html?hotel_name="+hotels_brand[j].hotel_name)
-}
+

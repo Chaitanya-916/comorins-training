@@ -9,3 +9,11 @@
     height: 160px;
     width: 200px;
 }
+.hotel img{
+    height: 150px;
+    width: 100%;
+}
+hr{
+    color: black;
+    height: 2px;
+}
