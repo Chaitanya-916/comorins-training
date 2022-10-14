@@ -13,7 +13,6 @@
     height: 150px;
     width: 100%;
 }
-hr{
-    color: black;
-    height: 2px;
+.nav-a-tag- a:hover{
+    color: red !important;
 }

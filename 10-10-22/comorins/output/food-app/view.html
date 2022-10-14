@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-     <!-- Required meta tags -->
-     <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-     <!-- Bootstrap CSS -->
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
- 
-     <link rel="stylesheet" href="css/style.css">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
     <title>view</title>
 </head>
+
 <body>
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
@@ -31,40 +33,61 @@
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
                 </ul>
-                <h4  id="log-func"></h4>
+                <h4 id="log-func"></h4>
                 <h4 id="cart"></h4>
-                <h4 id="sign-func"></h4>                
+                <h4 id="sign-func"></h4>
             </div>
         </nav>
-        <hr/>
+        <hr />
+    </div>
+    <h2 class="text-center mt-5 mb-5">Food Items</h2>
+    <div id="hotel-page" class="container hotel">
+        
+
     </div>
 
-   <div id="hotel-page" class="container hotel">
-    <h2 class="mt-5">Food Items :</h2>
-    
-   </div>
-
     <script>
-    let food_list =JSON.parse(localStorage.getItem("hotels"))
-    const queryString = window.location.search;
-    const urlParams= new URLSearchParams(queryString);
-    let name = urlParams.get("hotel_name");
-    console.log(name);
-let food_items=" ";
-let list;
-        for(let i=0;i<food_list.length;i++){
-            if(name == food_list[i].hotel_name){
-                list=food_list[i].food;
-                for(let j=0;j<list.length;j++){
-                    food_items+='<div class="card mb-3" style="max-width: 540px;"> <div class="row no-gutters"><div class="col-md-4"><img src='+ list[j].url + '></div><div class="col-md-8"><div class="card-body"><h5 class="card-title">'+list[j].name +'</h5><p class="card-text">'+ list[j].price+'</p><p class="card-text">'+list[j].category+'</p><p class="card-text"><small>'+list[j].type+'</small></p><a href="cart.html"><button onclick="cart()" class="btn btn-secondary"> Add </button></a></div></div></div></div>'
-              document.getElementById("hotel-page").innerHTML=food_items;
-                }               
+        let food_list = JSON.parse(localStorage.getItem("hotels"))
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        let name = urlParams.get("hotel_name");
+        console.log(name);
+        let food_items = " ";
+        let list;
+        for (let i = 0; i < food_list.length; i++) {
+            if (name == food_list[i].hotel_name) {
+                list = food_list[i].food;
+                for (let j = 0; j < list.length; j++) {
+
+                    food_items += '<div class="card mb-3" style="max-width: 540px;"> <div class="row no-gutters"><div class="col-md-4"><img src=' + list[j].url + '></div><div class="col-md-8"><div class="card-body"><h5 class="card-title">' + list[j].name + '</h5><p class="card-text"> <label> price :</label> <span><b>' + list[j].price + '</b></span></p><p class="card-text"><label> category :</label> <span><b>' + list[j].category + '</b></span></p><p class="card-text"><label> Type :</label> <span><b>' + list[j].type + '</b></span></p><a href=""><button onclick="cart(' + i + "," + j + ')" class="btn btn-secondary"> Add </button></a></div></div></div></div>'
+                    document.getElementById("hotel-page").innerHTML = food_items;
+
+                }
             }
         }
-        function cart(){
+        if (!localStorage.getItem("cart")) {
+            localStorage.setItem("cart", JSON.stringify([]));
+        }
+        let my_cart = JSON.parse(localStorage.getItem("cart"));
+        let local_status1 = localStorage.getItem('local-status');
+        function cart(ind, index) {           
+            let hotel_list = JSON.parse(localStorage.getItem("hotels"))
+            if(local_status1 == 'true'){
+                if (hotel_list[ind].hotel_name == name) {
+                my_cart.push(hotel_list[ind].food[index]);
+                localStorage.setItem("cart", JSON.stringify(my_cart))
+                alert("Click My Cart to see your food list.")
+            }
+            }
+            else if(local_status1 != 'true'){
+                alert("Login your profile, to add in the cart");
+            }
+           
 
         }
+
     </script>
     <script src="js/script.js"></script>
 </body>
+
 </html>

@@ -1,19 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link href='https://fonts.googleapis.com/css?family=poppins' rel='stylesheet'>
-  <link href='https://fonts.googleapis.com/css?family=SF UI Text' rel='stylesheet'>
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
-  <link rel="stylesheet" href="css/style.css">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
     <title>Cart</title>
 </head>
+
 <body>
-    <script></script>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <img class="main-logo" href="#" src="img/k-logo-food.webp" />
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll" style="max-height: 100px;">
+                    <form class="d-flex">
+                        <input class="form-control mr-2" type="search" placeholder="Search product" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </ul>
+                <h4 id="log-func"></h4>
+                <h4 id="cart"></h4>
+                <h4 id="sign-func"></h4>
+            </div>
+        </nav>
+        <hr />
+    </div>
+    <h2 class="mt-5 mb-5 text-center">Cart Items</h2>
+    <div id="cart-page" class="container hotel">
+        
+      
+
+    </div>
+    <div class="text-center mt-5 mb-5">
+        <a href=""><button onclick="buy()" class="cart-button btn btn-secondary">Place your Order</button> </a>
+    </div>
+
+    <script>
+        let cart_items = JSON.parse(localStorage.getItem("cart"));
+        let cart_list = "";
+        for (let i = 0; i < cart_items.length; i++) {
+            console.log(cart_items)
+            cart_list += '<div class="card mb-3" style="max-width: 540px;"><div class="row no-gutters"><div class="col-md-4"><img src=' + cart_items[i].url + '></div><div class="col-md-8"><div class="card-body"><h5 class="card-title">' + cart_items[i].name + '</h5><p class="card-text"> <label> price :</label> <span><b>' + cart_items[i].price + '</b></span></p><p class="card-text"><label> category :</label> <span><b>' + cart_items[i].category + '</b></span></p><p class="card-text"><label> Type :</label> <span><b>' + cart_items[i].type + '</b></span></p><a><button onclick="remove(' + i + ')"class="btn btn-secondary"> Remove </button></a></div></div></div></div>'
+            document.getElementById("cart-page").innerHTML = cart_list;
+        }
+        function remove(index) {
+            cart_items.splice(index, 1);
+            localStorage.setItem("cart", JSON.stringify(cart_items));
+            location.reload();
+        }
+        function buy() {
+            alert("Thank you for ordering on Krish App, Your order has placed");
+            cart_items.splice(0, 8);
+            localStorage.setItem("cart", JSON.stringify(cart_items));
+            location.reload();
+        }
+    </script>
+    <script src="js/script.js"></script>
 </body>
+
 </html>
