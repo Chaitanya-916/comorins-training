@@ -8,30 +8,30 @@
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <title>Res</title>
 </head>
-<body>
-    <label>Name</label>
+<body class="container-fluid">
+    <label>Name:</label>
     <input type="text" onkeyup="addDetail('name',this.value)" /><br/>
-    <label>Role</label>
+    <label>Role:</label>
     <input type="text" onkeyup="addDetail('Role',this.value)"/><br/>
-    <label>Email</label>
+    <label>Email:</label>
     <input type="email" onkeyup="addDetail('Email',this.value)" /><br/>
-    <label>Mobile-no</label>
+    <label>Mobile-no:</label>
     <input type="number" onkeyup="addDetail('Mobile',this.value)"/><br/>
-    <label>Summary</label>
+    <label>Summary:</label>
     <textarea type="text" onkeyup="addDetail('Summary',this.value)"></textarea><br/>
     <label>Experiance:</label><br>
-    <label>Role</label>
+    <label>Role:</label>
     <input type="text" onkeyup="addDetail('experiance',this.value,0,'role')"/>
-    <label>Company Name</label>
+    <label>Company Name:</label>
     <input type="text" onkeyup="addDetail('experiance',this.value,0,'Company name:')"/>
-    <label>place</label>
+    <label>place:</label>
     <input type="text" onkeyup="addDetail('experiance',this.value,0,'Place',)"/>
-    <label>Date of start</label>
+    <label>Date of start:</label>
     <input type="date" onkeyup="addDetail('experiance',this.value,0,'Date of start')"/>
-    <label>Date of releave</label>
+    <label>Date of releave:</label>
     <input type="date" onkeyup="addDetail('experiance',this.value,0,'Date of releave')"/><br/>
     <br/>
-    <label>Role</label>
+    <label>Role:</label>
     <input type="text" onkeyup="addDetail('experiance',this.value,1,'role')"/>
     <label>Company Name</label>
     <input type="text" onkeyup="addDetail('experiance',this.value,1,'Company name:')"/>
@@ -49,7 +49,13 @@
     <input type="text" onkeyup="addDetail('skills',this.value,2)" /><br/>
     <table>
         <br/>
-        <label>Education</label>
+        <h4>Education:</h4>
+        <thead>
+            <th>Cource</th>
+            <th>year</th>
+            <th>Institute</th>
+            <th>Percentage</th>
+        </thead>
         <tr>
             <td><input type="text" onkeyup="addDetail('education',this.value,0,'course')"/></td>
             <td><input type="text" onkeyup="addDetail('education',this.value,0,'year')"/></td>
@@ -75,23 +81,34 @@
             <td><input type="text" onkeyup="addDetail('education',this.value,3,'percentage')"/></td>
         </tr>
     </table>
+    <br/>
     <table>
         <tr>
-        <label>Projects</label>
+        <h4>Projects:</h4>
+        <thead>
+            <th>Title</th>
+            <th>Abstract</th>
+            <th>Software Used</th>
+        </thead>
         <td><input type="text" onkeyup="addDetail('projects',this.value,0,'title')"/></td>
         <td><textarea type="text" onkeyup="addDetail('projects',this.value,0,'abstract')"></textarea></td>
-        <td><input type="text" onkeyup="addDetail('projects',this.value,0,'softeare_used')"/></td>
+        <td><input type="text" onkeyup="addDetail('projects',this.value,0,'software_used')"/></td>
         </tr>
         <br/>
         <tr>
         <td><input type="text" onkeyup="addDetail('projects',this.value,1,'title')"/></td>
         <td><textarea type="text" onkeyup="addDetail('projects',this.value,1,'abstract')"></textarea></td>
-        <td><input type="text" onkeyup="addDetail('projects',this.value,1,'softeare_used')"/></td>
+        <td><input type="text" onkeyup="addDetail('projects',this.value,1,'software_used')"/></td>
         </tr>
     </table>
     <table>
         <br/>
-        <label>certification</label>
+        <h4>certification:</h4>
+        <thead>
+            <th>Cource</th>
+            <th>Year</th>
+            <th>Institution</th>
+        </thead>
         <tr>
             <td><input type="text" onkeyup="addDetail('certification',this.value,0,'course')"/></td>
             <td><input type="text" onkeyup="addDetail('certification',this.value,0,'year')"/></td>
@@ -103,7 +120,8 @@
             <td><input type="text" onkeyup="addDetail('certification',this.value,1,'institute')"/></td>
         </tr>
     </table>
-    <label>Personal Details: </label><br/>
+    <br/>
+    <h4>Personal Details: </h4><br/>
     <label>Age:</label>
     <input type="text" onkeyup="addDetail('personal_details',this.value,'age')" /><br/>
     <label>DOB:</label>
@@ -129,7 +147,7 @@
     <input type="text" onkeyup="addDetail('personal_details',this.value,'address','country')" /><br/>
     <label>Pin-Code:</label>
     <input type="number" onkeyup="addDetail('personal_details',this.value,'address','pin-code')" /><br/>
-    <label>languages</label>
+    <label>Languages Known:</label>
     <br/>
     <input type="text" id="languages" onkeyup="addDetail('personal_details',this.value,'languages_known',0)"/><br/>
     <input type="text" id="languages" onkeyup="addDetail('personal_details',this.value,1,'languages_known')" /><br/>
@@ -176,11 +194,10 @@
             else{
                 my_resume[key][index]=value;
             }
-        }
-
-        
+        }        
         $(document).ready(function(){
-            $.ajax({
+            function get_user(){
+                $.ajax({
                     url:"http://karka.academy/api/action.php",
                     type:"get",
                     data:{
@@ -189,16 +206,28 @@
                     },
                     success:function(data){
                         let inner_data=JSON.parse(data).data;    
-                                                             
+                            console.log(inner_data);
                          for(let i=0;i<inner_data.length;i++){ 
                             let data2=JSON.parse(inner_data[i].data);   
                             $("#show").append('<tr>' + 
                                 '<th scope="row">'+(i+1)+'</th>'+
-                                '<td><a href="">'+data2.name+'</a></td>' +
+                                '<td><a href=view.html?id='+inner_data[i].id+'>'+data2.name+'</a></td>' +
                                 '<td>'+data2.skills[0]+'</td>'+
-                                '<td> <button id="remove" value='+inner_data[i].id +'> Remove</button> </td>' +
+                                '<td> <button id="remove" value='+inner_data[i].id+'> Remove</button> </td>' +
                             '</tr>');                         
                         }
+                    },
+                });
+            }
+            $.ajax({
+                    url:"http://karka.academy/api/action.php",
+                    type:"get",
+                    data:{
+                        request:"get_user_resume",
+                        user:"chaitanya",
+                    },
+                    success:function(data){
+                        get_user();
                     },
                 });
             $("#sub-button").click(function(){  
@@ -212,22 +241,12 @@
                     },
                     success:function(data){
                         $("#show").html("");
-                        let inner_data=JSON.parse(data).data; 
-                        console.log("done");                                            
-                         for(let i=0;i<inner_data.length;i++){
-                            let data2=JSON.parse(inner_data[i].data);   
-                            $("#show").append('<tr>' + 
-                                '<th scope="row">'+(i+1)+'</th>'+
-                                '<td><a href="">'+data2.name+'</a></td>' +
-                                '<td>'+data2.skills[0]+'</td>'+
-                                '<td> <button id="remove" value='+inner_data[i].id+ '>Remove</button> </td>' +
-                            '</tr>'); 
-                        }                                            
+                        console.log(data)
+                        get_user();                                         
                     }
                 });
             });
-        });
-           $(document).on("click","#remove",function(){
+            $(document).on("click","#remove",function(){
             let delete_id=$(this).val();
             $.ajax({
                     url:"http://karka.academy/api/action.php",
@@ -239,21 +258,13 @@
                     },
                     success:function(data){
                         $("#show").html("");
-                        let inner_data=JSON.parse(data).data; 
-                        console.log("done");                                            
-                         for(let i=0;i<inner_data.length;i++){
-                            let data2=JSON.parse(inner_data[i].data);   
-                            $("#show").append('<tr>' + 
-                                '<th scope="row">'+(i+1)+'</th>'+
-                                '<td><a href="">'+data2.name+'</a></td>' +
-                                '<td>'+data2.skills[0]+'</td>'+
-                                '<td> <button id="remove" value='+inner_data[i].id+ '>Remove</button> </td>' +
-                            '</tr>'); 
-                        };
+                        get_user();
                     }
            });
            });
+        });
+           
         
     </script> 
 </body>
-</html>
+</html> 

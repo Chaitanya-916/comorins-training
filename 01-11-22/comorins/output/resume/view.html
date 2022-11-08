@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <title>Resume</title>
+    <style>
+       
+    </style>
+
+</head>
+<body>
+    <div class="main">
+        <header class="bg-dark">
+            <div class="header-part container ">
+                <div class="row">
+                    <div class="col-7 pt-4 pb-4 ">
+                        <h1 class="text-white" id="user_name"></h1>
+                        <p class="text-white">summary: <span class="d-inline" id="summary"></span></p>
+                        <label class="text-white">Mobile: <p class="d-inline" id="mobile"></p></label>
+                        <label class="text-white ml-5">Email: <span class="d-inline" id="mail"></span></label> <br/>
+                        <label class="text-white">Link: <a href="" class="d-inline" id="link">www.chaitanya.com</a></label>
+                        <label  class="text-white ml-5">place: <span class="d-inline" id="place"></span></label>
+                    </div>
+                    <div class="container col-5 pt-4 pb-4">
+                        <img class="vertical-center ml-5 mt-5 src='#' " />
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-7 mt-5">
+                    <h2 >Experience</h2>
+                    <hr/>
+                    <h4 class="d-inline">Role: <h5 class="d-inline"id="role"></h5></h4><br/>
+                    <br/>
+                    <h5>company:<span class="d-inline" id="company"></span></h5><br/>
+                    <label>date:<span class="d-inline" id="date"></span></label>
+                    <label class="ml-4">place:<span class="d-inline" id="work_place"></span></label>
+                    <p></p>
+                    <hr>
+                    <h4>role:</h4>
+                    <h5>company</h5>
+                    <label>date</label>
+                    <label class="ml-4">place:</label>
+                    <p></p>
+                    <hr/>
+                    <h2>Skills:</h2>
+                    <ul id="skill">
+                    </ul>
+                    <hr/>
+                    <h2>Activities:<span class="d-inline" id=""></span></h2>
+                    <hr/>
+                </div>
+                <div class="col-5 mt-5">
+                    <h2>Projects:</h2>
+                    <hr/>
+                    <h6>title:<span class="d-inline" id="title"></span></h6>
+                    <p></p>
+                    <h6>abstract:<span class="d-inline" id="abstract"></span></h6>
+                    <p></p>
+                    <h6>software used:<span class="d-inline" id="software_used"></span></h6>
+                    <hr/>
+                    <h2>Certification:</h2>
+                    <hr/>
+                    <p>course name:<span class="d-inline" id="course-name"></span></p>
+                    <p>institute:<span class="d-inline" id="institute"></span></p>
+                    <p>duration:<span class="d-inline" id="duration"></span></p>
+                    <h2>Education:</h2>
+                    <hr/>
+                    <label>course:<span class="d-inline" id="edu-cource"></span></label>
+                    <br/>
+                    <label>Institute:<span class="d-inline" id="edu-insititute"></span></label><br/>
+                    <label>Marks:<span class="d-inline" id="edu-mark"></span></label><br/>
+                    <label>year from:<span class="d-inline" id="edu-year-from"></span></label><br/>
+                    <label>year to:<span class="d-inline" id="edu-year-to"></span></label><br/>
+                    <div>
+                        <h2>Personal Details:</h2>
+                        <p>Age: <span class="d-inline" id="age"></span></p>
+                        <p>DOB: <span class="d-inline" id="dob"></span></p>
+                        <p>Gender: <span class="d-inline" id="gender"></span></p>
+                        <p>Marital Status: <span class="d-inline" id="marital-status"></span></p>
+                        <p>Address:<span class="d-inline" id="address"></span></p>
+                        <p>Languages:<span class="d-inline" id="lang"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript">
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const user_id = urlParams.get('id');
+    $(document).ready(function(){
+        $.ajax({
+                    url:"http://karka.academy/api/action.php",
+                    type:"get",
+                    data:{
+                        request:"get_resume_by_id",
+                        user:"chaitanya",
+                        id:user_id,
+                    },
+                    success:function (data){
+                        console.log(data);
+                        let inner_data=JSON.parse(data).data;    
+                        let data2=JSON.parse(inner_data.data); 
+                        $("#user_name").html(data2.name) 
+                        $("#skill").html("<li>"+data2.skills+"</li>") 
+                        $("#mobile").html(data2.Mobile)
+                        $("#summary").html(data2.Summary)                           
+                        $("#mail").html(data2.Email) 
+                        $("#place").html(data2.personal_details.address.town) 
+                        $("#age").html(data2.personal_details.age) 
+                        $("#dob").html(data2.personal_details.dob) 
+                        $("#gender").html(data2.personal_details.gender) 
+                        $("#role").html(data2.Role) 
+                        // $("#company").html(data2.experience.company)  
+                    
+                    },
+                });
+    });       
+    </script>
+</body>
+</html>
