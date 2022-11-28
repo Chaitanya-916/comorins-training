@@ -111,12 +111,125 @@
         };
         for(let value in person){
             console.log(value +'-'+person [value]);
-        };*/
+        };
+            //Part-3,Q7
+        let day;
+        switch(new Date().getDay()){
+            case 0:
+                day = "Today is sunday";
+                break;
+            case 1:
+                day = "Today is Monday";
+                break;
+            case 2:
+                day = "Today is Tuesday";
+                break;
+            case 3:
+                day = "Today is Wednesday";
+                break;
+            case 4:
+                day = "Today is Thursday";
+                break;
+            case 5:
+                day = "Today is Friday";
+                break;
+            case 6:
+                day = "Saturday";
+        }
+        console.log(day);
+            //Part-3,Q6
+        let number=3;
+        try{
+           if(numbers == 3){
+            console.log("Value is "+number);
+           }
+        }catch(e){
+            console.warn(e);
+            console.error(e)
+        }
+            //Part-3,Q9
+        let arr=[1,2,3,4,5,6,7,8,9,10];
+        for (let array_1 in arr){
+            console.log(array_1);
+        }
+        let array_2 =arr.map(function(element){
+            return element;
+        });
+        console.log(array_2);  
+        arr.forEach((item,array)=>{
+            console.log(array);
+        });
+        let array_3="";
+        for(let x of arr){
+            array_3 += x + " ";
+        }
+        console.log(array_3);
+            //Part-3,Q3
+        console.warn("Please update your browser");
+            //Part-3,Q4
+        console.error("invalid password");
+            //Part-3,Q3
+        let obj={};
+        console.log(Object.keys(obj).length);
+        console.log(JSON.stringify(obj));
+        console.log(Object.entries(obj).length);*/
+            //Part-4,Q1
+        /*let arr =[1,2,2,3,4,55,3,55]
+        let array = arr.filter((item,index) => arr.indexOf(item) === index);
+        console.log(array);
+            //Part-4,Q4
+        let obj =[
+            {no:1,
+            age:23
+            },
+            {no:2,
+            age:28
+            },
+            {no:3,
+            age:17
+            }
+        ]
+        let objs=obj.filter(ages=>ages.age>18);
+        console.log(objs);*/
+            //Part-5,Q1
+        /*let arr_1 =[12,43,456,5,2];
+        let arr_2 =[32,11,45,3,97];
+        let arr = arr_1.concat(arr_2);
+        console.log(Math.max(...arr));
+        console.log(Math.min(...arr));
+            //Part-5,Q2
+        let fishermen=[
+            {
+                name:"Raj",
+                score:123
+            },
+            {
+                name:"gopal",
+                score:93
+            },
+            {
+                name:"Akbar",
+                score:178
+            },
+        ]
+            let scores=fishermen.map(item=>item.score);
+            let total=scores.reduce((a,b)=>a+b/scores.length);
+            console.log("Average is: "+total);
+            let top_scorer=fishermen.filter(item=>item.score>100);
+            let name_of_topscorer=top_scorer.map(item=>item.name)
+            console.log("top Scorers : " + name_of_topscorer)
+                //Part-5,Q3
+            let name="sdfgt432dfgyu89iu754d";
+            let number=name.match(/\d+/g);
+            console.log(number);
+                //Part-5,Q5
+            function myFunction(a,b){
+                let val=a>0 && b>0? console.log("positive"):a>0 &&b<0 || a<0 && b>0?console.log("one value is positive"):console.log("negative");
+            }
+            myFunction(-03,-5);
+            myFunction(3,5);
+            myFunction(03,-5);*/
 
-        
-        
-        
-    
     </script>
-</body>
+</body> 
 </html>
